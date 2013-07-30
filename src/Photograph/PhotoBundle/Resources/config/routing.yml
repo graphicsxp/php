@@ -1,0 +1,3 @@
+photograph_photo_homepage:
+    pattern:  /home/
+    defaults: { _controller: PhotographPhotoBundle:Default:index }

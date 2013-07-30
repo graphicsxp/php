@@ -1,4 +1,0 @@
-ePhotograph
-===========
-
-ePhotograph

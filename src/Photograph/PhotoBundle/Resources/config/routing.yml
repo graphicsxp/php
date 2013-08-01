@@ -1,3 +1,8 @@
-photograph_photo_homepage:
+PhotographPhotoBundle_home:
     pattern:  /home/
     defaults: { _controller: PhotographPhotoBundle:Default:index }
+
+PhotographPhotoBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: PhotographPhotoBundle:Page:contact }
+    

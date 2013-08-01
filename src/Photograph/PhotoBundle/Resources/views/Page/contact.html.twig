@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="fullscreen_block">
+    <div class="fullscreen_title"><h1>Fullscreen contacts</h1></div>
+
+    <div class="fullscreen_content_wrapper">
+        <div class="fs_map fullscreen_container">
+            <iframe src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=New+York&amp;sll=49.891235,-97.15369&amp;sspn=47.259509,86.923828&amp;ie=UTF8&amp;hq=&amp;hnear=New+York,+United+States&amp;ll=40.714867,-74.005537&amp;spn=0.019517,0.018797&amp;z=14&amp;iwloc=near&amp;output=embed"></iframe>
+        </div>               
+    </div>
+
+    <div class="fullscreen_content">
+        <a href="javascript:void(0)" class="content_toggle"><span class="collapse">Collapse</span><span class="show">Show info</span></a>
+        <div class="fullscreen_content_padding">
+            <div class="row-fluid">
+                <div class="span12 module_cont module_contact_info module_none_padding">
+                    <p><span>Address:</span> 5512 Lorem Ipsum Vestibulum 666/13.</p>
+                    <p><span>Phone:</span> +1 800 789 50 12, +1 800 450 6935</p>
+                    <p><span>Email:</span> <a href="mailto:">mail@companyname.com</a></p>
+                    <p><span>Skype:</span> company</p>
+                </div>								
+            </div><!-- .row-fluid -->
+
+            <div class="row-fluid">
+                <div class="span12 module_cont module_contact_icons module_small_padding1">
+                    <a href="#" class="ico_socialize_facebook1 ico_socialize type1"></a>
+                    <a href="#" class="ico_socialize_twitter2 ico_socialize type1"></a>
+                    <a href="#" class="ico_socialize_pinterest ico_socialize type1"></a>
+                    <a href="#" class="ico_socialize_google2 ico_socialize type1"></a>
+                </div>
+            </div><!-- .row-fluid -->                    
+
+            <div class="row-fluid">
+                <div class="span12 module_cont module_text_area module_small_padding">
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia ostras per inceptos himenaeos. In vehicula placerat pharetra.</p>
+                    <p>Pellentesque vestibulum erat eu libero viverra consectetur ac eget turpis. Pellentesque magna enim, iaculis ut eleifend egetus nec ligula. Nullam mollis posuere libero, 
+                        vitae porta magna fringilla vitae. Quisque ullamcorper nulla nec tortor vehicula vele <a href="#">aliquet nibh</a> dignissim. Mauris non ligula augue, ac laoreet antet fusce enim magna, 
+                        tempus quis lobortis eu, pharetra eu ligula.</p>
+                </div>								
+            </div><!-- .row-fluid -->
+
+        </div>
+    </div>        
+</div>    
+{% endblock %}

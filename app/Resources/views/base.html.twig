@@ -52,26 +52,18 @@
     <body class="fullscreen_layout">        
         <header class="">            
             <div class="header_wrapper container">                               
-                <nav style="float: left">          
-                    test2
+                <nav style="float: left">                              
                     <ul class="pull-left">
                         <li>                            
-                            <a href="index.html" class="logo">
-                                <img src="{{ asset('img/logo.png') }}" alt="" class="brand logo_def" width="125" height="39" /></a>
+                            <a href="{{ path('PhotographPhotoBundle_home') }}" class="logo">
+                                <img src="{{ asset('img/logo.png') }}" alt="Samuel Berthelot Photographie" class="brand logo_def" width="125" height="39" /></a>
                         </li>
                     </ul>
                 </nav>
                 {% block navigation %}
                 <nav>
                     <ul class="menu">
-                        <li class="current-menu-parent"><a href="javascript:void(0)">ACCUEIL</a>
-                            <!--   <ul class="sub-menu">
-                                <li class="current-menu-item"><a href="index.html">Galerie</a></li>
-                                <li><a href="home_vimeo.html">Vimeo Background</a></li>
-                                <li><a href="home_youtube.html">Youtube Background</a></li>
-                                <li><a href="home_background.html">Image Background</a></li>
-                            </ul>-->
-                        </li>
+                        <li class="current-menu-parent"><a href="{{ path('PhotographPhotoBundle_home') }}">ACCUEIL</a> </li>
                         <li><a href="javascript:void(0)">PAGES</a>
                             <ul class="sub-menu">
                                 <li><a href="about.html">About</a></li>
@@ -120,14 +112,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="javascript:void(0)">CONTACTS</a>
-                            <ul class="sub-menu">
-                                <li><a href="contact_fullscreen.html">Fullscreen</a></li>
-                                <li><a href="contact.html">Full Width</a></li>
-                                <li><a href="contact_sidebar.html">With Sidebar</a></li>
-                            </ul>
+                        <li><a href="{{ path('PhotographPhotoBundle_contact') }}">CONTACT</a>
                         </li>
-                    </ul>
+                    </ul>                               
                     <!-- .menu -->
                     <div class="clear"></div>
                 </nav>
@@ -145,7 +132,7 @@
 
         {% block javascripts %}
         <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="js/theme.js"></script>              
+        <script type="text/javascript" src="{{ asset('js/theme.js')}}"></script>              
         {% endblock %}
     </body>
 </html>

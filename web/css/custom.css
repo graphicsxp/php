@@ -1,0 +1,30 @@
+﻿h1.small{
+    font-size:16px;
+}
+
+/*------------------------------------------------------------------*/ 
+/*	2) CONTENT
+/*------------------------------------------------------------------*/
+.contactcircle{
+	width:180px;
+	height:180px;
+	background:url(../img/pixel.png) repeat;
+	margin:60px 20px;
+	float:left;
+	padding:50px;
+	-webkit-border-radius: 180px;	
+	-moz-border-radius: 180px;	
+	border-radius: 180px;
+	position:relative;
+}
+.contactcircle p{
+	color:#FFF;	
+	padding:0 0 0 30px;
+	font-size:14px;
+}
+.contactcircle p a:hover{
+	color:#666;
+}
+.contactcircle p.man{background:url(../img/man.png) no-repeat left top;}
+.contactcircle p.phone{background:url(../img/contact.png) no-repeat left top;}
+.contactcircle p.envelop{background:url(../img/envelop.png) no-repeat left top;}

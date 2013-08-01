@@ -1,0 +1,4 @@
+photograph_photo:
+    resource: "@PhotographPhotoBundle/Resources/config/routing.yml"
+    prefix:   /
+

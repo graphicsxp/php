@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en" class="ie ie9">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!-- Mobile Specific Metas
+        +++++++++++++++++++++++++++ -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="{{ asset('img/favico.ico') }}">
+
+        <link rel="apple-touch-icon" href="img/apple_icons_57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple_icons_72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple_icons_114x114.png">
+
+        <title>{% block title %}Samuel Berthelot Photographie{% endblock %}</title>
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        {% block stylesheets %}
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-responsive.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/plugins.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/theme.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/theme_settings.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/skin.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/color_theme.css') }}" id="theme_color">
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />        
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/fs_gallery.css') }}">
+
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        <!--[if IE 8 ]>
+        <link rel="stylesheet" type="text/css" href="css/ie_css.css">
+        <script>
+            var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
+            for (var i = 0; i < e.length; i++) {
+                document.createElement(e[i]);
+            }		
+        </script>
+        <![endif]-->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    </head>
+    <body class="fullscreen_layout">        
+        <header class="">            
+            <div class="header_wrapper container">                               
+                <nav style="float: left">          
+                    test2
+                    <ul class="pull-left">
+                        <li>                            
+                            <a href="index.html" class="logo">
+                                <img src="{{ asset('img/logo.png') }}" alt="" class="brand logo_def" width="125" height="39" /></a>
+                        </li>
+                    </ul>
+                </nav>
+                {% block navigation %}
+                <nav>
+                    <ul class="menu">
+                        <li class="current-menu-parent"><a href="javascript:void(0)">ACCUEIL</a>
+                            <!--   <ul class="sub-menu">
+                                <li class="current-menu-item"><a href="index.html">Galerie</a></li>
+                                <li><a href="home_vimeo.html">Vimeo Background</a></li>
+                                <li><a href="home_youtube.html">Youtube Background</a></li>
+                                <li><a href="home_background.html">Image Background</a></li>
+                            </ul>-->
+                        </li>
+                        <li><a href="javascript:void(0)">PAGES</a>
+                            <ul class="sub-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="grid.html">Grid</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="sitemap.html">Sitemap</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">FEATURES</a>
+                            <ul class="sub-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="shortcodes.html">Shortcodes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">PORTFOLIO</a>
+                            <ul class="sub-menu">
+                                <li><a href="portfolio_grid.html">Grid Portfolio</a></li>
+                                <li><a href="portfolio_masonry.html">Grid Portfolio with Masonry</a></li>
+                                <li><a href="portfolio_post_fw.html">Fullscreen Portfolio Post</a></li>
+                                <li><a href="portfolio1.html">Portfolio 1 Column</a></li>
+                                <li><a href="portfolio2.html">Portfolio 2 Columns</a></li>
+                                <li><a href="portfolio3.html">Portfolio 3 Columns</a></li>
+                                <li><a href="portfolio4.html">Portfolio 4 Columns</a></li>
+                                <li><a href="portfolio_post.html">Portfolio Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">GALLERIES</a>
+                            <ul class="sub-menu">
+                                <li><a href="gallery_kenburns.html">Kenburns Gallery</a></li>
+                                <li><a href="gallery_grid.html">Grid Gallery</a></li>
+                                <li><a href="gallery_masonry.html">Grid Gallery with Masonry</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">BLOG</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog_fullscreen.html">Fullscreen</a></li>
+                                <li><a href="blog_post_fw.html">Fullscreen Blog Post</a></li>
+                                <li><a href="blog_full.html">Full Width</a></li>
+                                <li><a href="blogpost_full.html">Blog Post</a></li>
+                                <li><a href="javascript:void(0)">With Sidebar</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog_left.html">Left Sidebar</a></li>
+                                        <li><a href="blog_right.html">Right Sidebar</a></li>
+                                        <li><a href="blogpost_sidebar.html">Blog Post</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">CONTACTS</a>
+                            <ul class="sub-menu">
+                                <li><a href="contact_fullscreen.html">Fullscreen</a></li>
+                                <li><a href="contact.html">Full Width</a></li>
+                                <li><a href="contact_sidebar.html">With Sidebar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- .menu -->
+                    <div class="clear"></div>
+                </nav>
+                {% endblock %}
+            </div>
+        </header>
+
+
+                {% block body %}{% endblock %}
+
+             {# {% block footer %}
+                                Symfony2 blog tutorial - created by <a href="https://github.com/dsyph3r">dsyph3r</a>
+                {% endblock %} #}
+
+
+        {% block javascripts %}
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/theme.js"></script>              
+        {% endblock %}
+    </body>
+</html>

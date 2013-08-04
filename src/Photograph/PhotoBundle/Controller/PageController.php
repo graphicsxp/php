@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return $this->render('PhotographPhotoBundle:Page:contact.html.twig');
     }
+    
+    public function portfolioAction()
+    {
+        return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');
+    }
 }

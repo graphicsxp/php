@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+
+
+
+{% block body %}
+<div class="fullscreen_block">
+    <div class="gallery_kenburns">
+        <canvas id="kenburns">
+            <p>Your browser doesn't support canvas!</p>
+        </canvas>
+    </div>
+</div>    
+{% endblock %}
+
+
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/kenburns.js') }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        setKenburns();
+    });
+
+    $(window).resize(function() {
+        $('#kenburns').remove();
+        $('.fullscreen_block').append("<canvas id='kenburns'><p>Your browser doesn't support canvas!</p></canvas>");
+        setKenburns();
+    });
+    
+    
+    function setKenburns(){
+         var path = "{{ asset('img/gallery/')}}";
+    
+        $('#kenburns').attr('width', $(window).width());
+        $('#kenburns').attr('height', $(window).height());
+        $('#kenburns').kenburns({
+            images: [path + 'gallery01.jpg',
+                path + 'gallery02.jpg',
+                path + 'gallery03.jpg',
+                path + 'gallery04.jpg',
+                path + 'gallery05.jpg',
+                path + 'gallery06.jpg',
+                path + 'gallery07.jpg',
+                path + 'gallery08.jpg',
+                path + 'gallery09.jpg',
+                path + 'gallery10.jpg',
+                path + 'gallery11.jpg',
+                path + 'gallery12.jpg',
+                path + 'gallery13.jpg',
+                path + 'gallery14.jpg',
+                path + 'gallery15.jpg',
+                path + 'gallery16.jpg',
+                path + 'gallery17.jpg',
+                path + 'gallery18.jpg',
+                path + 'gallery19.jpg',
+                path + 'gallery20.jpg'
+            ],
+            frames_per_second: 30,
+            display_time: 5000,
+            fade_time: 1000,
+            zoom: 1.2,
+            background_color: '#000000'
+        });
+    }
+    </script>
+ {% endblock %}

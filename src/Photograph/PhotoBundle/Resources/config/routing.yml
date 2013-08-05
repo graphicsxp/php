@@ -10,3 +10,19 @@ PhotographPhotoBundle_portfolio:
     pattern:  /portfolio
     defaults: { _controller: PhotographPhotoBundle:Page:portfolio }
     
+PhotographPhotoBundle_about:
+    pattern:  /presentation
+    defaults: { _controller: PhotographPhotoBundle:Page:about }
+    
+PhotographPhotoBundle_faq:
+    pattern:  /faq
+    defaults: { _controller: PhotographPhotoBundle:Page:faq }
+    
+PhotographPhotoBundle_sitemap:
+    pattern:  /sitemap
+    defaults: { _controller: PhotographPhotoBundle:Page:sitemap }
+    
+    
+PhotographPhotoBundle_gallery:
+    pattern:  /galerie
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery }

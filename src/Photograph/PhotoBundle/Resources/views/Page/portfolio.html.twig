@@ -25,9 +25,9 @@
                                                     <li>
                                                         <ul data-option-key="filter" class="optionset">
                                                             <li class="selected"><a data-option-value="*" href="#filter">Tous</a></li>
-                                                            <li><a title="View all post filed under Portraits" data-option-value=".portraits" href="#filter">Mariages</a></li>
-                                                            <li><a title="View all post filed under Fashion" data-option-value=".fashion" href="#filter">Portraits</a></li>
-                                                            <li><a title="View all post filed under Stories" data-option-value=".stories" href="#filter">Paysages</a></li>
+                                                            <li><a title="Voir toutes les galeries Mariage" data-option-value=".wedding" href="#filter">Mariages</a></li>
+                                                            <li><a title="Voir toutes les galeries Portrait" data-option-value=".portrait" href="#filter">Portraits</a></li>
+                                                            <li><a title="Voir toutes les galeries Paysage" data-option-value=".landscape" href="#filter">Paysages</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -36,10 +36,10 @@
 
                                         <div class="portfolio_block image-grid columns2" id="list">
 
-                                            <div data-category="portraits" class="portraits element">
+                                            <div data-category="wedding" class="wedding element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
-                                                        <img src="img/portfolio/portfolio2-1.jpg" alt="" width="570" height="444">
+                                                        <img src="{{asset('img/portfolio/portfolio1-1.jpg')}}" alt="" width="570" height="444">
                                                         <div class="gallery_fadder"></div>
                                                         <div class="ico_gallery"></div><!-- .ico_gallery -->
                                                         <div class="gallery_descr">
@@ -50,10 +50,10 @@
                                                 </div>
                                             </div><!-- .element -->
 
-                                            <div data-category="portraits" class="fashion element">
+                                            <div data-category="wedding" class="portrait element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
-                                                        <img src="img/portfolio/portfolio2-2.jpg" alt="" width="570" height="444">
+                                                        <img src="{{asset('img/portfolio/portfolio2-1.jpg')}}" alt="" width="570" height="444">
                                                         <div class="gallery_fadder"></div>
                                                         <div class="ico_gallery"></div><!-- .ico_gallery -->
                                                         <div class="gallery_descr">
@@ -64,35 +64,35 @@
                                                 </div>
                                             </div><!-- .element -->
 
-                                            <div data-category="portraits" class="stories element">
+                                            <div data-category="wedding" class="landscape element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
-                                                        <img src="img/portfolio/portfolio2-3.jpg" alt="" width="570" height="444">
+                                                        <img src="{{asset('img/portfolio/portfolio3-1.jpg')}}" alt="" width="570" height="444">
                                                         <div class="gallery_fadder"></div>
                                                         <div class="ico_gallery"></div><!-- .ico_gallery -->
                                                         <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Vitae ultrices</h6>
-                                                            <p>Nullam porta augue et diam consectetur, vitae ultrices quam.</p>
+                                                            <h6 class="gallery_title">Paysages</h6>
+                                                            <p>description</p>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div><!-- .element -->
 
-                                            <div data-category="portraits" class="portraits element">
+                                            <div data-category="wedding" class="wedding element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
-                                                        <img src="img/portfolio/portfolio2-4.jpg" alt="" width="570" height="444">
+                                                        <img src="{{asset('img/portfolio/portfolio4-1.jpg')}}" alt="" width="570" height="444">
                                                         <div class="gallery_fadder"></div>
                                                         <div class="ico_gallery"></div><!-- .ico_gallery -->
                                                         <div class="gallery_descr">
-                                                            <h6 class="gallery_title">Nullam ut augue</h6>
-                                                            <p>Nam consectetur ullamcorper aliquam. Nullam ut augue porttitor, malesuada.</p>
+                                                            <h6 class="gallery_title">Portrait</h6>
+                                                            <p>description.</p>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div><!-- .element -->
 
-                                            <div data-category="portraits" class="fashion element">
+                                            <div data-category="wedding" class="portrait element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
                                                         <img src="img/portfolio/portfolio2-5.jpg" alt="" width="570" height="444">
@@ -106,7 +106,7 @@
                                                 </div>
                                             </div><!-- .element -->
 
-                                            <div data-category="portraits" class="stories element">
+                                            <div data-category="wedding" class="landscape element">
                                                 <div class="filter_img gallery_item">
                                                     <a href="portfolio_post.html">
                                                         <img src="img/portfolio/portfolio2-6.jpg" alt="" width="570" height="444">
@@ -127,14 +127,14 @@
                                             //<![CDATA[
                                             items_set = [//Gallery Data
 
-                                                {src: 'img/portfolio/portfolio2-7.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'portraits', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
-                                                {src: 'img/portfolio/portfolio2-8.jpg', url: 'portfolio_post.html', post_type: 'audio', category: 'fashion', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
-                                                {src: 'img/portfolio/portfolio2-9.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'stories', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
-                                                {src: 'img/portfolio/portfolio2-10.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'portraits', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'Aliquam et dolor a dui imperdiet luctus. Etiam ultrices imperdiet nibh, at congue nunc accumsan quis. Vestibulum rutrum mattis enim, id consequat purus blandit facilisis.'},
-                                                {src: 'img/portfolio/portfolio2-11.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'stories', title: 'Sed eget leo orci, ut pretium massa.', description: 'Suspendisse tortor metus, suscipit eget vehicula in, hendrerit sed diam. Etiam sodales faucibus feugiat. Etiam vehicula, erat eu consectetur eleifend, magna diam mattis nunc.'},
-                                                {src: 'img/portfolio/portfolio2-12.jpg', url: 'portfolio_post.html', post_type: 'text', category: 'fashion', title: 'Cras facilisis tellus sed velit iaculis a gravida ipsum sagittis.', description: 'Fusce pellentesque laoreet quam ac rutrum. Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a.'},
-                                                {src: 'img/portfolio/portfolio2-13.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'portraits', title: 'Phasellus fringilla venenatis turpis, in accumsan augue accumsan at.', description: 'Sed eget leo orci, ut pretium massa. Suspendisse tortor metus, suscipit eget vehicula in, hendrerit sed diam. Etiam sodales faucibus feugiat.'},
-                                                {src: 'img/portfolio/portfolio2-14.jpg', url: 'portfolio_post.html', post_type: 'video', category: 'stories', title: 'Cras facilisis tellus sed velit iaculis a gravida ipsum sagittis.', description: 'Proin dapibus arcu nec diam faucibus vestibulum. In hac habitasse platea dictumst. Ut ante purus, eleifend nec dignissim sed, convallis sed elit. Morbi sodales, sapien non faucibus.'}
+                                                {src: 'img/portfolio/portfolio2-7.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
+                                                {src: 'img/portfolio/portfolio2-8.jpg', url: 'portfolio_post.html', post_type: 'audio', category: 'portrait', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
+                                                {src: 'img/portfolio/portfolio2-9.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
+                                                {src: 'img/portfolio/portfolio2-10.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'Aliquam et dolor a dui imperdiet luctus. Etiam ultrices imperdiet nibh, at congue nunc accumsan quis. Vestibulum rutrum mattis enim, id consequat purus blandit facilisis.'},
+                                                {src: 'img/portfolio/portfolio2-11.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'landscape', title: 'Sed eget leo orci, ut pretium massa.', description: 'Suspendisse tortor metus, suscipit eget vehicula in, hendrerit sed diam. Etiam sodales faucibus feugiat. Etiam vehicula, erat eu consectetur eleifend, magna diam mattis nunc.'},
+                                                {src: 'img/portfolio/portfolio2-12.jpg', url: 'portfolio_post.html', post_type: 'text', category: 'wedding', title: 'Cras facilisis tellus sed velit iaculis a gravida ipsum sagittis.', description: 'Fusce pellentesque laoreet quam ac rutrum. Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a.'},
+                                                {src: 'img/portfolio/portfolio2-13.jpg', url: 'portfolio_post.html', post_type: 'image', category: 'wedding', title: 'Phasellus fringilla venenatis turpis, in accumsan augue accumsan at.', description: 'Sed eget leo orci, ut pretium massa. Suspendisse tortor metus, suscipit eget vehicula in, hendrerit sed diam. Etiam sodales faucibus feugiat.'},
+                                                {src: 'img/portfolio/portfolio2-14.jpg', url: 'portfolio_post.html', post_type: 'video', category: 'landscape', title: 'Cras facilisis tellus sed velit iaculis a gravida ipsum sagittis.', description: 'Proin dapibus arcu nec diam faucibus vestibulum. In hac habitasse platea dictumst. Ut ante purus, eleifend nec dignissim sed, convallis sed elit. Morbi sodales, sapien non faucibus.'}
 
                                             ];
                                             $('#list').portfolio_addon({

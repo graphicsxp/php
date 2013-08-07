@@ -8,7 +8,7 @@ PhotographPhotoBundle_contact:
     
 PhotographPhotoBundle_portfolio:
     pattern:  /portfolio
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio }
+    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: '' }
     
 PhotographPhotoBundle_about:
     pattern:  /presentation
@@ -26,3 +26,7 @@ PhotographPhotoBundle_sitemap:
 PhotographPhotoBundle_gallery:
     pattern:  /galerie
     defaults: { _controller: PhotographPhotoBundle:Page:gallery }
+    
+PhotographPhotoBundle_gallery:
+    pattern:  /portfolio/mariage/pierre-et-angelique
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'pierre-et-angelique' }

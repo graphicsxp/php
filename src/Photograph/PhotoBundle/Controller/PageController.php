@@ -10,7 +10,15 @@ class PageController extends Controller {
         return $this->render('PhotographPhotoBundle:Page:contact.html.twig');
     }
 
-    public function portfolioAction() {
+    public function portfolioAction($name) {
+        switch ($name) {
+            case 'pierre-et-angelique':
+                break;
+            default :
+                return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');
+
+                break;
+        }
         return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');
     }
 

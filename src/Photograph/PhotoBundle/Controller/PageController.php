@@ -13,10 +13,10 @@ class PageController extends Controller {
     public function portfolioAction($name) {
         switch ($name) {
             case 'pierre-et-angelique':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-pierre-et-angelique.html.twig');
                 break;
             default :
                 return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');
-
                 break;
         }
         return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');

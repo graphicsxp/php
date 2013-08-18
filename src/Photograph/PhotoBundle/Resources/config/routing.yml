@@ -21,12 +21,11 @@ PhotographPhotoBundle_faq:
 PhotographPhotoBundle_sitemap:
     pattern:  /sitemap
     defaults: { _controller: PhotographPhotoBundle:Page:sitemap }
-    
-    
+        
 PhotographPhotoBundle_gallery:
     pattern:  /galerie
     defaults: { _controller: PhotographPhotoBundle:Page:gallery }
     
-PhotographPhotoBundle_gallery:
+PhotographPhotoBundle_portfolio_post_pierre_et_angelique:
     pattern:  /portfolio/mariage/pierre-et-angelique
-    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'pierre-et-angelique' }
+    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'pierre-et-angelique' }

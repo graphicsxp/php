@@ -123,20 +123,20 @@
     {% endblock %}
 
     {% block javascripts %}
-    <script>
-    //<![CDATA[
-    items_set = [//Gallery Data
+        <script>
+        //<![CDATA[
+        items_set = [//Gallery Data
 
-        {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
-        {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
-        {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
-        {src: 'img/portfolio/portfolio4-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'portrait', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'Aliquam et dolor a dui imperdiet luctus. Etiam ultrices imperdiet nibh, at congue nunc accumsan quis. Vestibulum rutrum mattis enim, id consequat purus blandit facilisis.'}
-    ];
-    $('#list').portfolio_addon({
-        type: 1,
-        load_count: 2,
-        items: items_set
-    });
-    //]]
-    </script>
-    {% endblock %}
+            {src: 'img/portfolio/portfolio1-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Fusce pellentesque laoreet quam ac rutrum.', description: 'Nunc lobortis odio et mauris iaculis id sollicitudin eros imperdiet. Etiam dapibus convallis dui, a blandit neque scelerisque a. Praesent accumsan, leo non placerat tincidunt.'},
+            {src: 'img/portfolio/portfolio2-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'wedding', title: 'Vestibulum faucibus velit ut sem adipiscing ac.', description: 'Nunc tristique urna vitae eros aliquam consectetur. Nullam porttitor auctor felis, vitae laoreet nisi scelerisque sed. Quisque congue luctus massa pellentesque rutrum.'},
+            {src: 'img/portfolio/portfolio3-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'landscape', title: 'Aliquam eleifend purus eget mauris fermentum.', description: 'Maecenas lobortis justo vitae odio aliquam vel gravida ipsum bibendum. Sed ac orci quam, eu tempor odio. Duis elementum lorem vitae urna adipiscing.'},
+            {src: 'img/portfolio/portfolio4-1.jpg', url: 'portfolio_post.html', post_type: 'gallery', category: 'portrait', title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', description: 'Aliquam et dolor a dui imperdiet luctus. Etiam ultrices imperdiet nibh, at congue nunc accumsan quis. Vestibulum rutrum mattis enim, id consequat purus blandit facilisis.'}
+        ];
+        $('#list').portfolio_addon({
+            type: 1,
+            load_count: 2,
+            items: items_set
+        });
+        //]]
+        </script>
+   {% endblock %}

@@ -3,63 +3,38 @@
 
 
 {% block body %}
-<div class="fullscreen_block">
-    <div class="gallery_kenburns">
-        <canvas id="kenburns">
-            <p>Your browser doesn't support canvas!</p>
-        </canvas>
-    </div>
-</div>    
+<div class="fullscreen_block">   
+    <div class="img_container"></div>
+</div>
 {% endblock %}
 
-
 {% block javascripts %}
-<script type="text/javascript" src="{{ asset('js/kenburns.js') }}"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        setKenburns();
-    });
+<script type = "text/javascript" src ="{{ asset('js/fs_gallery.js') }}"></script>
+<script>
+    var path = "{{ asset('img/gallery/')}}";
+    var pathThmb = "{{ asset('img/gallery/thmb/')}}";
 
-    $(window).resize(function() {
-        $('#kenburns').remove();
-        $('.fullscreen_block').append("<canvas id='kenburns'><p>Your browser doesn't support canvas!</p></canvas>");
-        setKenburns();
+    gallery_set = [//Gallery Data
+        {image: path + 'gallery01.jpg', thmb: pathThmb + 'gallery01.jpg', title: "Photographe", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+        {image: path + '/gallery02.jpg', thmb: pathThmb + 'gallery02.jpg', title: "Photographe", description: "Luxembourg - Strasbourg - Metz - Arlon"},
+        {image: path + '/gallery03.jpg', thmb: pathThmb + 'gallery03.jpg', title: "Dolor sit amet", description: "proin molestie pulvinar lorem sit amet placerat."},
+        {image: path + '/gallery04.jpg', thmb: pathThmb + 'gallery04.jpg', alt: 'Ut luctus viv', fit: 'cover', title: "Ut luctus viv", description: "vestibulum ante ipsum primis in faucibus orci luctus."},
+        {image: path + '/gallery05.jpg', thmb: pathThmb + 'gallery05.jpg', alt: 'Duis ante veli', fit: 'cover', title: "Duis ante veli", description: "ut eu urna eu ipsum ultrices dapibus sit amet"},
+        {image: path + '/gallery06.jpg', thmb: pathThmb + 'gallery06.jpg', alt: 'Mauris pretium', fit: 'cover', title: "Mauris pretium", description: "luctus viverra urna non fermentum sit dolor."},
+        {image: path + '/gallery07.jpg', thmb: pathThmb + 'gallery07.jpg', alt: 'Praesent doro', fit: 'cover', title: "Praesent doro", description: "commodo nulla magna, vel dignissim dui aliquet eu."},
+        {image: path + '/gallery08.jpg', thmb: pathThmb + 'gallery08.jpg', alt: 'Curabitur ut', fit: 'cover', title: "Curabitur ut", description: "ante velit, blandit quis lacus eu, tincidunt vulputate."},
+        {image: path + '/gallery09.jpg', thmb: pathThmb + 'gallery09.jpg', alt: 'Vestibulum eget', fit: 'cover', title: "Vestibulum eget", description: "varius interdum mauris sagittis tempor."},
+        {image: path + '/gallery10.jpg', thmb: pathThmb + 'gallery10.jpg', alt: 'Curabitur pulvinar', fit: 'cover', title: "Curabitur pulvinar", description: "mauris pretium facilisis nisl nec suscipit."},
+        {image: path + '/gallery11.jpg', thmb: pathThmb + 'gallery11.jpg', alt: 'Cras lobortis est', fit: 'cover', title: "Cras lobortis est", description: "quisque in ante ut augue rutrum venenatis urna."},
+        {image: path + '/gallery12.jpg', thmb: pathThmb + 'gallery12.jpg', alt: 'Sed non ante', fit: 'cover', title: "Sed non ante", description: "curabitur mollis aliquet ligula tincidunt venenatis."},
+        {image: path + '/gallery13.jpg', thmb: pathThmb + 'gallery13.jpg', alt: 'Aliquam tincidunt', fit: 'cover', title: "Aliquam tincidunt", description: "integer risus nibh, elementum non blandit suscipit."},
+        {image: path + '/gallery14.jpg', thmb: pathThmb + 'gallery14.jpg', alt: 'Ut nec diam ac', fit: 'cover', title: "Ut nec diam ac", description: "morbi et dignissim tellus, eu porttitor lacus."},
+    ];
+
+    $('.fullscreen_block').fs_gallery({
+        fx: 'slide_left', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/
+        slide_time: 4000, /*This time must be < then time in css*/
+        slides: gallery_set
     });
-    
-    
-    function setKenburns(){
-         var path = "{{ asset('img/gallery/')}}";
-    
-        $('#kenburns').attr('width', $(window).width());
-        $('#kenburns').attr('height', $(window).height());
-        $('#kenburns').kenburns({
-            images: [path + 'gallery01.jpg',
-                path + 'gallery02.jpg',
-                path + 'gallery03.jpg',
-                path + 'gallery04.jpg',
-                path + 'gallery05.jpg',
-                path + 'gallery06.jpg',
-                path + 'gallery07.jpg',
-                path + 'gallery08.jpg',
-                path + 'gallery09.jpg',
-                path + 'gallery10.jpg',
-                path + 'gallery11.jpg',
-                path + 'gallery12.jpg',
-                path + 'gallery13.jpg',
-                path + 'gallery14.jpg',
-                path + 'gallery15.jpg',
-                path + 'gallery16.jpg',
-                path + 'gallery17.jpg',
-                path + 'gallery18.jpg',
-                path + 'gallery19.jpg',
-                path + 'gallery20.jpg'
-            ],
-            frames_per_second: 30,
-            display_time: 5000,
-            fade_time: 1000,
-            zoom: 1.2,
-            background_color: '#000000'
-        });
-    }
     </script>
- {% endblock %}
+{% endblock %}

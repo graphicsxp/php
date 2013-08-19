@@ -12,8 +12,17 @@ class PageController extends Controller {
 
     public function portfolioAction($name) {
         switch ($name) {
-            case 'pierre-et-angelique':
-                return $this->render('PhotographPhotoBundle:Page:portfolio-post-pierre-et-angelique.html.twig');
+            case 'angelique-et-pierre':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-angelique-et-pierre.html.twig');
+                break;
+            case 'maud-et-fabrice':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-maud-et-fabrice.html.twig');
+                break;
+            case 'landscapes':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-landscapes.html.twig');
+                break;
+            case 'portraits':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-portraits.html.twig');
                 break;
             default :
                 return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');

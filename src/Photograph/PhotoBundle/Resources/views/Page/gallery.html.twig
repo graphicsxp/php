@@ -1,7 +1,5 @@
 {% extends '::base.html.twig' %}
 
-
-
 {% block body %}
 <div class="fullscreen_block">   
     <div class="img_container"></div>
@@ -15,21 +13,27 @@
     var pathThmb = "{{ asset('img/gallery/thmb/')}}";
 
     gallery_set = [//Gallery Data
-        {image: path + 'gallery01.jpg', thmb: pathThmb + 'gallery01.jpg', title: "Photographe", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery02.jpg', thmb: pathThmb + 'gallery02.jpg', title: "Photographe", description: "Luxembourg - Strasbourg - Metz - Arlon"},
-        {image: path + '/gallery03.jpg', thmb: pathThmb + 'gallery03.jpg', title: "Dolor sit amet", description: "proin molestie pulvinar lorem sit amet placerat."},
-        {image: path + '/gallery04.jpg', thmb: pathThmb + 'gallery04.jpg', alt: 'Ut luctus viv', fit: 'cover', title: "Ut luctus viv", description: "vestibulum ante ipsum primis in faucibus orci luctus."},
-        {image: path + '/gallery05.jpg', thmb: pathThmb + 'gallery05.jpg', alt: 'Duis ante veli', fit: 'cover', title: "Duis ante veli", description: "ut eu urna eu ipsum ultrices dapibus sit amet"},
-        {image: path + '/gallery06.jpg', thmb: pathThmb + 'gallery06.jpg', alt: 'Mauris pretium', fit: 'cover', title: "Mauris pretium", description: "luctus viverra urna non fermentum sit dolor."},
-        {image: path + '/gallery07.jpg', thmb: pathThmb + 'gallery07.jpg', alt: 'Praesent doro', fit: 'cover', title: "Praesent doro", description: "commodo nulla magna, vel dignissim dui aliquet eu."},
-        {image: path + '/gallery08.jpg', thmb: pathThmb + 'gallery08.jpg', alt: 'Curabitur ut', fit: 'cover', title: "Curabitur ut", description: "ante velit, blandit quis lacus eu, tincidunt vulputate."},
-        {image: path + '/gallery09.jpg', thmb: pathThmb + 'gallery09.jpg', alt: 'Vestibulum eget', fit: 'cover', title: "Vestibulum eget", description: "varius interdum mauris sagittis tempor."},
-        {image: path + '/gallery10.jpg', thmb: pathThmb + 'gallery10.jpg', alt: 'Curabitur pulvinar', fit: 'cover', title: "Curabitur pulvinar", description: "mauris pretium facilisis nisl nec suscipit."},
-        {image: path + '/gallery11.jpg', thmb: pathThmb + 'gallery11.jpg', alt: 'Cras lobortis est', fit: 'cover', title: "Cras lobortis est", description: "quisque in ante ut augue rutrum venenatis urna."},
-        {image: path + '/gallery12.jpg', thmb: pathThmb + 'gallery12.jpg', alt: 'Sed non ante', fit: 'cover', title: "Sed non ante", description: "curabitur mollis aliquet ligula tincidunt venenatis."},
-        {image: path + '/gallery13.jpg', thmb: pathThmb + 'gallery13.jpg', alt: 'Aliquam tincidunt', fit: 'cover', title: "Aliquam tincidunt", description: "integer risus nibh, elementum non blandit suscipit."},
-        {image: path + '/gallery14.jpg', thmb: pathThmb + 'gallery14.jpg', alt: 'Ut nec diam ac', fit: 'cover', title: "Ut nec diam ac", description: "morbi et dignissim tellus, eu porttitor lacus."},
+        {image: path + 'gallery01.jpg', thmb: pathThmb + 'gallery01.jpg'},
+        {image: path + '/gallery02.jpg', thmb: pathThmb + 'gallery02.jpg'},
+        {image: path + '/gallery03.jpg', thmb: pathThmb + 'gallery03.jpg'},
+        {image: path + '/gallery04.jpg', thmb: pathThmb + 'gallery04.jpg'},
+        {image: path + '/gallery05.jpg', thmb: pathThmb + 'gallery05.jpg'},
+        {image: path + '/gallery06.jpg', thmb: pathThmb + 'gallery06.jpg'},
+        {image: path + '/gallery07.jpg', thmb: pathThmb + 'gallery07.jpg'},
+        {image: path + '/gallery08.jpg', thmb: pathThmb + 'gallery08.jpg'},
+        {image: path + '/gallery09.jpg', thmb: pathThmb + 'gallery09.jpg'},
+        {image: path + '/gallery10.jpg', thmb: pathThmb + 'gallery10.jpg'},
+        {image: path + '/gallery11.jpg', thmb: pathThmb + 'gallery11.jpg'},
+        {image: path + '/gallery12.jpg', thmb: pathThmb + 'gallery12.jpg'},
+        {image: path + '/gallery13.jpg', thmb: pathThmb + 'gallery13.jpg'},
+        {image: path + '/gallery14.jpg', thmb: pathThmb + 'gallery14.jpg'},
     ];
+
+    $.each(gallery_set, function(i, n) {
+        n.description = "15/06/2013 - Strasbourg";
+        n.title = "Angélique et Pierre";
+        n.alt = "Mariage de Angélique et Pierre";
+    })
 
     $('.fullscreen_block').fs_gallery({
         fx: 'slide_left', /*fade, zoom, slide_left, slide_right, slide_top, slide_bottom*/

@@ -25,10 +25,6 @@ PhotographPhotoBundle_prestations:
 PhotographPhotoBundle_sitemap:
     pattern:  /sitemap
     defaults: { _controller: PhotographPhotoBundle:Page:sitemap }
-        
-PhotographPhotoBundle_gallery:
-    pattern:  /galerie
-    defaults: { _controller: PhotographPhotoBundle:Page:gallery }
     
 PhotographPhotoBundle_portfolio_post_angelique_et_pierre:
     pattern:  /portfolio/mariage/angelique-et-pierre
@@ -45,3 +41,19 @@ PhotographPhotoBundle_portfolio_post_landscapes:
 PhotographPhotoBundle_portfolio_post_portraits:
     pattern:  /portfolio/portraits
     defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'portraits' }
+    
+PhotographPhotoBundle_gallery_angelique_et_pierre:
+    pattern:  /gallery/mariage/angelique-et-pierre
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'angelique-et-pierre' }
+    
+PhotographPhotoBundle_gallery_maud_et_fabrice:
+    pattern:  /gallery/mariage/maud-et-fabrice
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'maud-et-fabrice' }
+    
+PhotographPhotoBundle_gallery_landscapes:
+    pattern:  /gallery/paysages
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'landscapes' }
+    
+PhotographPhotoBundle_gallery_portraits:
+    pattern:  /gallery/portraits
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'portraits' }

@@ -43,7 +43,24 @@ class PageController extends Controller {
         return $this->render('PhotographPhotoBundle:Page:sitemap.html.twig');
     }
 
-    public function galleryAction() {
+    public function galleryAction($name) {
+         switch ($name) {
+            case 'angelique-et-pierre':
+                return $this->render('PhotographPhotoBundle:Page:gallery-angelique-et-pierre.html.twig');
+                break;
+            case 'maud-et-fabrice':
+                return $this->render('PhotographPhotoBundle:Page:gallery-maud-et-fabrice.html.twig');
+                break;
+            case 'landscapes':
+                return $this->render('PhotographPhotoBundle:Page:gallery-landscapes.html.twig');
+                break;
+            case 'portraits':
+                return $this->render('PhotographPhotoBundle:Page:gallery-portraits.html.twig');
+                break;
+            default :
+                return $this->render('PhotographPhotoBundle:Page:gallery.html.twig');
+                break;
+        }
         return $this->render('PhotographPhotoBundle:Page:gallery.html.twig');
     }
 

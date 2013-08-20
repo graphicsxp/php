@@ -34,6 +34,7 @@
                 'css/color_theme.css'
                 'css/fs_gallery.css'
                 'css/custom.css'
+                'css/royalslider.css'
                 filter='cssrewrite'        
             %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}" >
@@ -74,8 +75,7 @@
                                 <li><a href="{{ path('PhotographPhotoBundle_sitemap') }}">Sitemap</a></li>
                             </ul>
                         </li>                    
-                        <li><a href="{{ path('PhotographPhotoBundle_portfolio') }}">PORTFOLIO</a></li>
-                        <li><a href="{{ path('PhotographPhotoBundle_gallery') }}">GALERIE</a></li>
+                        <li><a href="{{ path('PhotographPhotoBundle_portfolio') }}">PORTFOLIO</a></li>                        
                         <li><a href="{{ path('PhotographPhotoBundle_prestations') }}">PRESTATIONS</a></li>
                         <li><a href="{{ path('PhotographPhotoBundle_contact') }}">CONTACT</a>
                         </li>
@@ -101,7 +101,8 @@
             {% javascripts                
                 'js/theme.js'                   
                 'js/sorting.js'
-                'js/jquery.isotope.min.js'                   
+                'js/jquery.isotope.min.js'  
+                'js/jquery.royalslider.min.js'
             %}
         <script src="{{ asset_url }}"></script>
             {% endjavascripts %}       

@@ -52,7 +52,7 @@ class PageController extends Controller {
         
         $finder->files()->in('/var/www/ePhotograph/web/' . $path)->sortByName();
         foreach ($finder as $file){
-            array_push($array, array('src' => $path . '/' . $file->getFilename(), 'href' => $path . '/' . $file->getFilename()));
+            array_push($array, array('src' => $path . '/thumbs/' . $file->getFilename(), 'href' => $path . '/' . $file->getFilename()));
         }
         
         return $this->render('PhotographPhotoBundle:Page:gallery.html.twig', array('divs' => $array));

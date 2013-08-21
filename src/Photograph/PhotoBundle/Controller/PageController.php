@@ -3,6 +3,8 @@
 namespace Photograph\PhotoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Finder\Finder;
+
 
 class PageController extends Controller {
 
@@ -44,24 +46,15 @@ class PageController extends Controller {
     }
 
     public function galleryAction($name) {
-         switch ($name) {
-            case 'angelique-et-pierre':
-                return $this->render('PhotographPhotoBundle:Page:gallery-angelique-et-pierre.html.twig');
-                break;
-            case 'maud-et-fabrice':
-                return $this->render('PhotographPhotoBundle:Page:gallery-maud-et-fabrice.html.twig');
-                break;
-            case 'landscapes':
-                return $this->render('PhotographPhotoBundle:Page:gallery-landscapes.html.twig');
-                break;
-            case 'portraits':
-                return $this->render('PhotographPhotoBundle:Page:gallery-portraits.html.twig');
-                break;
-            default :
-                return $this->render('PhotographPhotoBundle:Page:gallery.html.twig');
-                break;
+        $finder = new Finder();               
+        $path = 'img/gallery/' . str_replace('-', '_', $name);       
+        $array = array();
+        
+        $finder->files()->in('/var/www/ePhotograph/web/' . $path)->sortByName();
+        foreach ($finder as $file){
+            array_push($array, array('src' => $path . '/' . $file->getFilename(), 'href' => $path . '/' . $file->getFilename()));
         }
-        return $this->render('PhotographPhotoBundle:Page:gallery.html.twig');
+        
+        return $this->render('PhotographPhotoBundle:Page:gallery.html.twig', array('divs' => $array));
     }
-
 }

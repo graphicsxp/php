@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+
+<div class="fullscreen_block">
+    <div class="fs_grid_module">
+
+       {% for div in divs %}
+        <div class="grid_gallery-item">               
+            <div class="item_hover">
+                <div class="item_hover-img">
+                    <img src="{{asset(div['src'])}}" alt=""/>
+                    <div class="item_hover-fadder"></div>
+                    <a href="{{ asset(div['href']) }}" rel="prettyPhoto[gallery1]" class="prettyPhoto"></a>
+                </div>
+              
+            </div><!-- .item_hover -->
+        </div><!-- .grid_gallery-item -->
+        {% endfor %}
+
+        <div class="clear"></div>
+    </div><!-- .fs_grid_module -->
+</div> <!-- .fullscreen_block -->   
+<div class="header2top"></div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+    $(document).ready(function() {
+    });
+    $(window).load(function() {
+        //$('.fs_grid_module').masonry();
+        $('.fs_grid_module').masonry({
+            itemSelector: '.grid_gallery-item',
+            isAnimated: true
+        });
+        setTimeout("$('.fs_grid_module').masonry()", 500);
+    });
+    $(window).resize(function() {
+        $('.fs_grid_module').masonry();
+    });
+    </script>
+{% endblock %}

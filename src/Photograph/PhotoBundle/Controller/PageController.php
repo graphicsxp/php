@@ -20,8 +20,8 @@ class PageController extends Controller {
             case 'maud-et-fabrice':
                 return $this->render('PhotographPhotoBundle:Page:portfolio-post-maud-et-fabrice.html.twig');
                 break;
-            case 'landscapes':
-                return $this->render('PhotographPhotoBundle:Page:portfolio-post-landscapes.html.twig');
+            case 'paysages':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-paysages.html.twig');
                 break;
             case 'portraits':
                 return $this->render('PhotographPhotoBundle:Page:portfolio-post-portraits.html.twig');

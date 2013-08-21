@@ -36,13 +36,13 @@ PhotographPhotoBundle_portfolio_post_maud_et_fabrice:
     
 PhotographPhotoBundle_portfolio_post_landscapes:
     pattern:  /portfolio/paysages
-    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'landscapes' }
+    defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'paysages' }
     
 PhotographPhotoBundle_portfolio_post_portraits:
     pattern:  /portfolio/portraits
     defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'portraits' }
     
 PhotographPhotoBundle_gallery:
-    pattern:  /gallery/{name}
+    pattern:  /galeries/{name}
     defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'angelique-et-pierre' }
     

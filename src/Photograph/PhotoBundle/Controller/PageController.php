@@ -50,7 +50,7 @@ class PageController extends Controller {
         $path = 'img/gallery/' . str_replace('-', '_', $name);       
         $array = array();
         
-        $finder->files()->in('/var/www/ePhotograph/web/' . $path)->sortByName();
+        $finder->files()->in('/var/www/ePhotograph/web/' . $path)->sortByName()->depth('== 0');
         foreach ($finder as $file){
             array_push($array, array('src' => $path . '/thumbs/' . $file->getFilename(), 'href' => $path . '/' . $file->getFilename()));
         }

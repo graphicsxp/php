@@ -44,5 +44,5 @@ PhotographPhotoBundle_portfolio_post_portraits:
     
 PhotographPhotoBundle_gallery:
     pattern:  /galeries/{name}
-    defaults: { _controller: PhotographPhotoBundle:Page:gallery, name: 'angelique-et-pierre' }
+    defaults: { _controller: PhotographPhotoBundle:Page:gallery }
     

@@ -4,7 +4,7 @@ PhotographPhotoBundle_home:
 
 PhotographPhotoBundle_contact:
     pattern:  /contact
-    defaults: { _controller: PhotographPhotoBundle:Page:contact }
+    defaults: { _controller: PhotographPhotoBundle:Contact:index}
     
 PhotographPhotoBundle_portfolio:
     pattern:  /portfolio

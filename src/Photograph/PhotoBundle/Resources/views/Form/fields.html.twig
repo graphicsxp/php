@@ -1,0 +1,23 @@
+{# src/Photograph/PhotoBundle/Resources/views/Form/fields.html.twig #}
+
+{% block field_row %}
+{% spaceless %}
+   {{ form_errors(form) }}
+   {{ form_widget(form) }}
+{% endspaceless %}
+{% endblock field_row %}
+
+{% block email_widget %}
+    <input type="email" {{ block('attributes') }} value="{{ value }}" class="field-email form_field">       
+{% endblock %}
+
+{% block text_widget %}
+    {{dump(block('attributes'))}}
+    <input type="text" {{ block('attributes') }} value="{{ value }}" class="field-name form_field">
+{% endblock %}
+    
+{% block textarea_widget %}
+     <textarea name="field-message" {{ block('attributes') }}  cols="45" rows="5"  class="field-message form_field">{{ value }}</textarea>
+{% endblock %}
+    
+    

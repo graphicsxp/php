@@ -42,6 +42,10 @@ PhotographPhotoBundle_portfolio_post_portraits:
     pattern:  /portfolio/portraits
     defaults: { _controller: PhotographPhotoBundle:Page:portfolio, name: 'portraits' }
     
+PhotographPhotoBundle_portfolio_post_architecture:
+    pattern:  /portfolio/architecture
+    defaults: { _controller: PhotographPhotoBundle:Page:architecture, name: 'architecture' }
+    
 PhotographPhotoBundle_gallery:
     pattern:  /galeries/{name}
     defaults: { _controller: PhotographPhotoBundle:Page:gallery }

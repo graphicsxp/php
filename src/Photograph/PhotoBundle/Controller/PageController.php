@@ -26,6 +26,9 @@ class PageController extends Controller {
             case 'portraits':
                 return $this->render('PhotographPhotoBundle:Page:portfolio-post-portraits.html.twig');
                 break;
+            case 'architecture':
+                return $this->render('PhotographPhotoBundle:Page:portfolio-post-architecture.html.twig');
+                break;
             default :
                 return $this->render('PhotographPhotoBundle:Page:portfolio.html.twig');
                 break;
@@ -43,6 +46,10 @@ class PageController extends Controller {
 
     public function sitemapAction() {
         return $this->render('PhotographPhotoBundle:Page:sitemap.html.twig');
+    }
+    
+    public function prestationsAction() {
+        return $this->render('PhotographPhotoBundle:Page:prestations.html.twig');
     }
 
     public function galleryAction($name) {
